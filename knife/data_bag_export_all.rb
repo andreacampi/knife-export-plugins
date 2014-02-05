@@ -84,7 +84,7 @@ module ZephirWorks
       def sort_users(entry)
         result = {}
 
-        %w[id ssh_keys groups uid gid shell comment forward htpasswd openvpn zenoss].each do |key|
+        %w[id ssh_keys groups uid gid shell comment forward htpasswd openvpn zenoss username].each do |key|
           result[key] = sort_attribute_value(entry[key]) if entry.has_key?(key)
         end
 
